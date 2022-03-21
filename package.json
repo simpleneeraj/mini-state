@@ -6,6 +6,7 @@
 	"main": "dist/index.js",
 	"typings": "dist/index.d.ts",
 	"module": "dist/mini-state.esm.js",
+	"description": "Manage react state with simple context api",
 	"files": [
 		"dist",
 		"src"

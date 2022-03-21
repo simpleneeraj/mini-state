@@ -1,0 +1,108 @@
+{
+	"name": "mini-state",
+	"author": "neerajcodes",
+	"version": "0.0.1",
+	"license": "MIT",
+	"main": "dist/index.js",
+	"typings": "dist/index.d.ts",
+	"module": "dist/mini-state.esm.js",
+	"files": [
+		"dist",
+		"src"
+	],
+	"engines": {
+		"node": ">=10"
+	},
+	"scripts": {
+		"start": "tsdx watch ",
+		"start:cjs": "tsdx watch --format cjs",
+		"start:esm": "tsdx watch --format esm",
+		"start:umd": "tsdx watch --format umd",
+		"start:all": "tsdx watch --format cjs,esm,umd",
+		"build": "tsdx build ",
+		"build:cjs": "tsdx build --format cjs",
+		"build:esm": "tsdx build --format esm",
+		"build:umd": "tsdx build --format umd",
+		"build:all": "tsdx build --format cjs,esm,umd",
+		"test": "tsdx test --passWithNoTests",
+		"lint": "tsdx lint",
+		"lint:fix": "tsdx lint --fix",
+		"commit": "git-cz",
+		"prepare": "tsdx build --format cjs",
+		"size": "size-limit",
+		"publish": "npm publish",
+		"release": "release-it"
+	},
+	"peerDependencies": {
+		"react": ">=16"
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "tsdx lint"
+		}
+	},
+	"prettier": {
+		"semi": true,
+		"printWidth": 80,
+		"proseWrap": "never",
+		"arrowParens": "avoid",
+		"trailingComma": "es5",
+		"singleQuote": true,
+		"bracketSpacing": true,
+		"requirePragma": true,
+		"bracketSameLine": true
+	},
+	"size-limit": [
+		{
+			"path": "dist/mini-state.cjs.development.js",
+			"limit": "900 B"
+		},
+		{
+			"path": "dist/mini-state.cjs.production.min.js",
+			"limit": "800 B"
+		},
+		{
+			"path": "dist/mini-state.esm.js",
+			"limit": "900 B"
+		},
+		{
+			"path": "dist/mini-state.umd.development.js",
+			"limit": "900 B"
+		},
+		{
+			"path": "dist/mini-state.umd.production.min.js",
+			"limit": "800 B"
+		}
+	],
+	"devDependencies": {
+		"@size-limit/preset-small-lib": "^7.0.8",
+		"@types/react": "^17.0.39",
+		"@types/react-dom": "^17.0.11",
+		"husky": "^7.0.4",
+		"react": "^17.0.2",
+		"react-dom": "^17.0.2",
+		"release-it": "^14.12.5",
+		"size-limit": "^7.0.8",
+		"tsdx": "^0.14.1",
+		"tslib": "^2.3.1",
+		"typescript": "^3.9.10"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/neerajcodes/mini-state.git"
+	},
+	"publishConfig": {
+		"registry": "https://registry.npmjs.org/",
+		"access": "public"
+	},
+	"git": {
+		"commitMessage": "chore: release v${version}"
+	},
+	"github": {
+		"release": true,
+		"assets": [
+			"dist/*.zip"
+		],
+		"releaseNotes": "generate-release-notes.sh --from=${latestTag} --to=${tagName}"
+	}
+}

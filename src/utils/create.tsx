@@ -1,6 +1,8 @@
 import * as React from "react";
-import { CreateContext, Dispatch, Reducer, SetStateAction } from "../types";
-
+import type {Reducer} from "../types"
+import type {Dispatch} from "../types" 
+import type {CreateContext} from "../types" 
+import type {SetStateAction} from "../types" 
 
 /**
  * Create Context with the help of createCTX() custom context creator

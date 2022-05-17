@@ -1,6 +1,6 @@
 {
 	"name": "mini-state",
-	"author": "neerajcodes",
+	"author": "simpleneeraj",
 	"version": "0.0.1",
 	"license": "MIT",
 	"main": "dist/index.js",
@@ -90,20 +90,10 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/neerajcodes/mini-state.git"
+		"url": "https://github.com/packagewithsimpleneeraj/mini-state.git"
 	},
 	"publishConfig": {
 		"registry": "https://registry.npmjs.org/",
 		"access": "public"
-	},
-	"git": {
-		"commitMessage": "chore: release v${version}"
-	},
-	"github": {
-		"release": true,
-		"assets": [
-			"dist/*.zip"
-		],
-		"releaseNotes": "generate-release-notes.sh --from=${latestTag} --to=${tagName}"
 	}
 }
